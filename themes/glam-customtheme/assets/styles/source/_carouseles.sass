@@ -1,0 +1,137 @@
+/** ARCHIVO DONDE SE ENCUENTRAN LOS CAROUSELES DEL TEMA **/
+
+
+/***************************************************************************************/
+/**-- 1.1 CAROUSEL SLIDER HOME   -----------------------------------------------------**/
+/***************************************************************************************/
+
+#slider-home
+	margin: 0 auto 16px
+	
+	//Contenido
+	.slider-content
+		bottom    : 0
+		box-sizing: border-box
+		position  : absolute
+		width     : 100%
+		padding   : 30px 0 80px 
+		background: rgba( 0,0,0,.4 )
+		//TITULO
+		h2 
+			color          : #fff
+			font-family    : 'Roboto' , sans-serif
+			font-size      : 3.692em
+			font-weight    : 700
+			text-align     : center
+			text-decoration: none !important
+			top            : 31px	
+			width          : 100%
+		//Span
+		span 
+			color          : #fff
+			font-size      : 2em
+			display        : block 
+			text-align     : center
+			text-decoration: none !important
+			width          : 100%
+
+
+	//Flechas
+	.owl-controls 
+		.owl-nav
+			.owl-prev , .owl-next
+				cursor     : pointer
+				height     : 70px
+				text-indent: -9999px
+				position   : absolute
+				width      : 61px
+				top        : 0
+				display    : block
+
+			.owl-prev
+				background : transparent url('../../images/sprite.png') no-repeat 0 -66px
+				left       : 0
+
+			.owl-next
+				background : transparent url('../../images/sprite.png') no-repeat -61px -66px
+				right      : 0
+		
+		//Indicadores
+		.owl-dots
+			bottom    : 45px
+			position  : absolute
+			text-align: center
+			width     : 100%
+			//Indicador
+			.owl-dot
+				+border-radius( 20px )
+				background-color: transparent
+				border          : 3px solid #999
+				display         : inline-block
+				height          : 16px
+				margin-right    : 7px
+				text-indent     : -9999px
+				width           : 16px
+				+transition( all 500ms ease-in )
+				//active
+				&.active 
+					background: white
+					border    : 3px solid white 
+
+
+/***************************************************************************************/
+/**-- 1.1 CAROUSEL SERVICIOS HOME  ---------------------------------------------------**/
+/***************************************************************************************/
+
+#carousel-services
+	//Item preview
+	.itemPreviewService
+		//Titulo
+		h2 
+			color    : white 
+			font-size: 13.5px 
+			margin   : 0 
+			padding  : 10px 0 
+		//Figure
+		figure 
+			background-size: cover
+			height         : 120px 
+			width          : 100%
+			margin         : 0 auto 14px 
+		//Extracto
+		.content-excerpt
+			font-size : 13.5px
+
+//Flechas de Carousel
+.arrowCarousel__services 
+	color          : #0074C3
+	font-size      : 35px 
+	text-decoration: none !important
+	display        : inline-block
+	margin         : 0 3px 
+	//focus 
+	&:focus 
+		text-decoration: none !important
+	//hover
+	&:hover 
+		+animation( pulse 1s ease-in-out infinite )
+
+/***************************************************************************************/
+/**-- 1.1 CAROUSEL SERVICIOS SINGLE  ---------------------------------------------------**/
+/***************************************************************************************/
+
+#carousel-single-service
+	//Item 
+	figure.imageGalleryService
+		background-size: cover 
+		height         : 230px 
+
+//Contenedor de Flechas
+.containerCarousel__services
+	background: #0073C3
+	a 
+		color          : white 
+		display        : inline-block
+		font-size      : 25px 
+		margin         : 0 4px 
+		text-decoration: none !important

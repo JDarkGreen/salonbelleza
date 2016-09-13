@@ -1,0 +1,6 @@
+[13-Sep-2016 22:19:53 UTC] PHP Warning:  mysqli_real_connect():  in C:\xampp\htdocs\salonbelleza\wp-includes\wp-db.php on line 1529
+[13-Sep-2016 22:19:53 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in C:\xampp\htdocs\salonbelleza\wp-includes\wp-db.php on line 1559
+[13-Sep-2016 22:19:55 UTC] PHP Warning:  mysql_connect():  in C:\xampp\htdocs\salonbelleza\wp-includes\wp-db.php on line 1559
+[13-Sep-2016 22:20:01 UTC] PHP Warning:  mysqli_real_connect():  in C:\xampp\htdocs\salonbelleza\wp-includes\wp-db.php on line 1529
+[13-Sep-2016 22:20:01 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in C:\xampp\htdocs\salonbelleza\wp-includes\wp-db.php on line 1559
+[13-Sep-2016 22:20:03 UTC] PHP Warning:  mysql_connect():  in C:\xampp\htdocs\salonbelleza\wp-includes\wp-db.php on line 1559

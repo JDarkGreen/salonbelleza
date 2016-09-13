@@ -1,0 +1,79 @@
+/*----------------------------------------------------------------------------------*/
+/*--------------------- ARCHIVO HEADER  DE PÁGINA ----------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+//---------------------------*
+// HEADER MAIN
+//---------------------------*
+
+#mainHeader 
+	padding : 14px 0 0 0
+
+/*$ Item */ 
+.mainHeader__item
+	//Icon 
+	i 
+		+border-radius( 50% )
+		align-items    : center 
+		border         : 1px solid #EBEBEB
+		color          : #CEA73E
+		display        : flex 
+		height         : 50px 
+		justify-content: center 
+		margin         : 0 15px 0 0 
+		width          : 50px 
+	//Párrafos
+	p 
+		color      : #777777
+		font-size  : 14px 
+		margin     : 0 auto 4px 
+
+		&.text-phone
+			color : black
+			span 
+				color : #CEA73E
+
+
+//---------------------------*
+// MAIN NAVIGATION
+//---------------------------*
+
+/*Navigation*/
+nav.mainNavigation
+	border-top : 1px solid #E8E8E8
+	font-family: "Casloncp", sans-serif
+	ul 
+		list-style-type: none 
+		margin         : 0 
+		padding        : 0
+		text-align     : center 
+		li 
+			display    : inline-block
+			line-height: 1 
+			padding    : 22px 10px
+			//Last element
+			&:last-child
+				a 
+					&:after 
+						background: transparent
+			a 
+				+transition( all 500ms cubic-bezier(.5,.5,.5,1) )
+				color          : black
+				display        : block
+				font-size      : 18px 
+				text-decoration: none
+				//after 
+				&:after 
+					+border-radius( 50% )
+					background    : #CEA73E
+					content       : ""
+					display       : inline-block
+					height        : 4px 
+					margin        : 0 0 0 11px
+					vertical-align: middle
+					width         : 4px 
+				//hover
+				&:hover 
+					color : #CEA73E
+
+
