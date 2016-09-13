@@ -43,6 +43,13 @@ require('functions/register-menu.php');
 require('functions/register-type-posts.php');
 
 /*-----------------
+/* Registrar Metabox
+*------------------*/
+
+require('functions/register-metabox.php');
+
+
+/*-----------------
 /* Soporte de tema
 *------------------*/
 require('functions/support-formats.php');
@@ -52,3 +59,6 @@ require('functions/support-formats.php');
 *------------------*/
 
 require_once('functions/scripts-js.php');
+
+
+

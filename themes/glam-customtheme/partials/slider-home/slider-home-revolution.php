@@ -35,7 +35,7 @@
 
 			<?php
 				#Extraer transición por slider o dejarlo por defecto
-				$transition = get_post_meta( get_the_ID() , 'mb_revslider_select' , true );
+				$transition = get_post_meta( get_the_ID() , 'mb_rev_slider_select' , true );
 				$transition = !empty($transition) ? $transition : 'boxslide';
 			?>
 			
