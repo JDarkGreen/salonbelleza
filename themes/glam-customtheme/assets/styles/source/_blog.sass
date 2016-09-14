@@ -1,0 +1,46 @@
+
+/***************************************************************************************/
+/**-- SECCION RELACIONADA AL BLOG ---------------------------------------------------**/
+/***************************************************************************************/
+
+
+.pageInicioBlog
+	background: #F7F7F7
+	padding   : 60px 0 
+
+
+/**[ Carousel de Blog ]**/
+#carousel-blog
+	margin : 35px 0 0 0
+
+/**[ Item preview de post ]**/
+.itemPostPreview
+
+	//Imagen
+	figure 
+		overflow: hidden
+		margin  : 0 auto 30px 
+		img 
+			+transition( all 500ms ease-in )
+		&:before
+			border  : 1px solid #D0A73F
+			bottom  : 11px 
+			content : ""
+			left    : 11px 
+			position: absolute 
+			right   : 11px 
+			top     : 11px 
+			z-index : 99
+			+transition( all 500ms ease-in )
+		//hover 
+		&:hover 
+			&:before
+				border : 1px solid transparent 
+			img 
+				+filter( sepia(80%) )
+
+	//Nombre o título
+	h2 
+		color      : black 
+		font-family: "SerifBeta", sans-serif
+		font-size  : 24px

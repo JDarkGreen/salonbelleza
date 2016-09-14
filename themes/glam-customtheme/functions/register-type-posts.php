@@ -79,6 +79,30 @@ function create_post_type(){
 		'taxonomies'  => array( 'post_tag' ),
 		'menu_icon'   => 'dashicons-format-gallery',
 	);
+	/*|-----STAFF ----------------------|*/
+	
+	$labels_staff = array(
+		'name'               => __('Staff'),
+		'singular_name'      => __('Staff'),
+		'add_new'            => __('Nuevo Integrante'),
+		'add_new_item'       => __('Agregar nuevo Integrante'),
+		'edit_item'          => __('Editar Integrante'),
+		'view_item'          => __('Ver Integrante'),
+		'search_items'       => __('Buscar Integrantes'),
+		'not_found'          => __('Integrante no encontrado'),
+		'not_found_in_trash' => __('Integrante no encontrado en la papelera'),
+	);
+
+	$args_staff = array(
+		'labels'      => $labels_staff,
+		'has_archive' => true,
+		'public'      => true,
+		'hierachical' => false,
+		'supports'    => array('title','editor','excerpt','custom-fields','thumbnail','page-attributes' ),
+		'show_ui' => true,
+		'taxonomies'  => array( 'post_tag' ),
+		'menu_icon'   => 'dashicons-id',
+	);
 
 
 	/*|REGISTRAR|*/
@@ -91,6 +115,9 @@ function create_post_type(){
 
 	#GALERIA IMAGENES
 	register_post_type( 'theme-gallery-images' , $args_gallery );
+
+	#STAFF
+	register_post_type( 'theme-staff' , $args_staff );
 
 
 	flush_rewrite_rules();

@@ -8,8 +8,7 @@ global $post;
 /******************************************************************/
 
 /**[ INCLUIR METABOX DE GALERÍA ]**/
-include("metabox/common/mb_custom_gallery.php");
-
+#include("metabox/common/mb_custom_gallery.php");
 
 
 /******************************************************************/

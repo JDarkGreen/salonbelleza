@@ -54,72 +54,76 @@
 
 <body <?php body_class(); ?>>
 
-<!-- Header -->
-<header id="mainHeader" class="mainHeader">
+<!-- Contenedor canvas wrapper para slider mobile -->
+<div canvas="container">
 
-	<!-- Only in Desktop -->
-	<div class="hidden-xs-down">
-		
-		<!-- Contenedor Layout -->
-		<div class="pageWrapperLayout">
-	
-			<div class="row">
-				
-				<div class="col-xs-4">
-					
-					<div class="mainHeader__item containerFlex">
-						<!-- Icon -->
-						<i class="fa fa-phone" aria-hidden="true"></i>
-						
-						<!-- Text -->
-						<div>
-							<p class="text-phone"> <span> Tel.: </span> 800-2325 </p>
-							<p> Atencón: 8am a 8pm | Mar. - Dom </p>
-						</div>
+	<!-- Header -->
+	<header id="mainHeader" class="mainHeader">
 
-					</div> <!-- /.mainHeader__item -->
-				
-				</div> <!-- /.col-xs-4 -->
-
-
-				<div class="col-xs-4">
-
-					<h1 class="mainLogo">
-						<a href="<?= site_url(); ?>">
-							<img src="<?= $logo_theme; ?>" alt="<?php bloginfo('description'); ?>" class="img-fluid" />
-						</a>
-					</h1> <!-- /.mainLogo -->
-					
-				</div> <!-- /.col-xs-4 -->
-
-
-				<div class="col-xs-4">
-					
-					<div class="mainHeader__item containerFlex">
-						<!-- Icon -->
-						<i class="fa fa-map-marker" aria-hidden="true"></i>
-						
-						<!-- Text -->
-						<div>
-							<p>Av. Arenales 254, San Isidro <br/>
-							   Lima - Perú
-							</p>
-						</div>
-
-					</div> <!-- /.mainHeader__item -->
-				
-				</div> <!-- /.col-xs-4 -->
-
-			</div> <!-- /.row -->
+		<!-- Only in Desktop -->
+		<div class="hidden-xs-down">
 			
-		</div> <!-- /.pageWrapperLayout -->
+			<!-- Contenedor Layout -->
+			<div class="pageWrapperLayout">
+		
+				<div class="row">
+					
+					<div class="col-xs-4">
+						
+						<div class="mainHeader__item containerFlex">
+							<!-- Icon -->
+							<i class="fa fa-phone" aria-hidden="true"></i>
+							
+							<!-- Text -->
+							<div>
+								<p class="text-phone"> <span> Tel.: </span> 800-2325 </p>
+								<p> Atencón: 8am a 8pm | Mar. - Dom </p>
+							</div>
 
-	</div> <!-- /.hidden-xs-down -->
-	
-	<!-- MainNavigation -->
-	<?php include( locate_template('partials/main-navigation.php') ); ?>
+						</div> <!-- /.mainHeader__item -->
+					
+					</div> <!-- /.col-xs-4 -->
 
-	
-</header> <!-- /.#mainHeader -->
+
+					<div class="col-xs-4">
+
+						<h1 class="mainLogo">
+							<a href="<?= site_url(); ?>">
+								<img src="<?= $logo_theme; ?>" alt="<?php bloginfo('description'); ?>" class="img-fluid" />
+							</a>
+						</h1> <!-- /.mainLogo -->
+						
+					</div> <!-- /.col-xs-4 -->
+
+
+					<div class="col-xs-4">
+						
+						<div class="mainHeader__item containerFlex">
+							<!-- Icon -->
+							<i class="fa fa-map-marker" aria-hidden="true"></i>
+							
+							<!-- Text -->
+							<div>
+								<p>Av. Arenales 254, San Isidro <br/>
+								   Lima - Perú
+								</p>
+							</div>
+
+						</div> <!-- /.mainHeader__item -->
+					
+					</div> <!-- /.col-xs-4 -->
+
+				</div> <!-- /.row -->
+				
+			</div> <!-- /.pageWrapperLayout -->
+
+		</div> <!-- /.hidden-xs-down -->
+		
+		<!-- MainNavigation -->
+		<?php include( locate_template('partials/main-navigation.php') ); ?>
+
+	</header> <!-- /.#mainHeader -->
+
+
 
 

@@ -27,6 +27,15 @@
 include('functions/constants.php');
 
 
+/******************************************************************/
+/* 	Archivos de Condiguración en el Administrador */
+/*******************************************************************/
+
+/*-----------------
+* Agregar nuevas columnas 
+*------------------*/
+require('admin/custom/new-columns.php');
+
 
 /*******************************************************************/
 /* 	Archivos de Condiguración en el Tema  */

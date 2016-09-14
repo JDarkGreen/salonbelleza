@@ -1,0 +1,56 @@
+
+/***************************************************************************************/
+/**-- SECCION RELACIONADA A SERVICIOS ------------------------------------------------**/
+/***************************************************************************************/
+
+//Contenedor en Inicio
+.pageInicioServices
+	padding : 53px 0 0
+
+/* Carousel Contenedor de Items */
+#carousel-single-services
+	padding : 50px 0 0 0
+	
+/* Items de Carousel de servicio */
+.itemServicePreview
+	display  : inline-block
+	width    : 100%
+	//Imagen
+	figure.featured-image
+		margin   : 0
+		overflow : hidden
+		img 
+			+transition( all 500ms ease-in-out )
+			+filter( grayscale(0%) )
+
+	//.container-text
+	.container-text	
+		align-content  : flex-end
+		border         : 1px solid #c4a648
+		bottom         : 15px 
+		box-sizing     : border-box
+		display        : flex
+		flex-wrap      : wrap 
+		justify-content: center
+		left           : 13px
+		padding        : 0 0 56px 
+		position       : absolute
+		right          : 13px 
+		top            : 15px 
+		+transition( all 500ms ease-in-out )
+		font-family: "Casloncp",sans-serif
+
+		//Titulo
+		h2 
+			color: white 
+			width: 100%
+
+	//Hover
+	&:hover 
+		figure.featured-image
+			img 
+				+scale( 1.06 )
+				+filter( grayscale(100%) )
+		.container-text	
+			//border: 1px solid transparent
+

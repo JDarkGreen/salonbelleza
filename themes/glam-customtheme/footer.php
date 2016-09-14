@@ -16,5 +16,7 @@
 
 	<?php wp_footer(); ?>
 
+	</div> <!-- /end sliderbar container -->
+
 </body>
 </html>

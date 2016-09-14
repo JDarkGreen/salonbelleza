@@ -51,9 +51,9 @@ function getWidthBrowser()
 
 		j("#carousel-home").revolution({
 			delay         : 6000, 
-			fullWidth     : "on",
-			navigationType: 'none',
-			onHoverStop   : "off",
+			fullWidth     : 'on',
+			navigationType: 'bullet',
+			onHoverStop   : 'off',
 			startheight   : 457,
 		}); 
 

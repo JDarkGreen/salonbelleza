@@ -27,7 +27,7 @@
 <div class="banner-container containerRelative"> <span class="Apple-tab-span"> </span>
 
 	<!-- Contenedor Wrapper for sliders -->
-	<section id="carousel-home" class="pageInicio__slider containerRelative">
+	<section id="carousel-home" class="pageInicio__slider containerRelative" >
 
 		<ul style="padding:0; margin: 0; list-style-type:none;">
 
@@ -39,24 +39,37 @@
 				$transition = !empty($transition) ? $transition : 'boxslide';
 			?>
 			
-			<li class="item-slider" data-transition="<?= $transition ?>" data-slotamount="10">
+			<li class="item-slider" data-transition="<?= $transition ?>" data-slotamount="10" data-delay="10000000">
 
 				<!-- Imagen Destacada -->
 				<?php if( has_post_thumbnail() ) :  ?>
 					<?php the_post_thumbnail('full', array('class'=>'img-fluid') ); ?>
 				<?php endif; ?>
 				
-				<?php /*
 
 				<!-- Caption Titulo -->
-				<div class="caption sft big_white" data-x="480" data-y="277" data-speed="3000" data-start="900" data-easing="easeOutBack">
-					<section class="pageInicio__slider__content">
-						<h2 class="text-uppercase">
-							<?php _e( get_the_title() , LANG ); ?>
+				<div class="caption sft big_white" data-x="270" data-y="153" data-speed="3000" data-start="900" data-easing="easeOutBack">
+
+					<section class="pageInicio__slider__content text-xs-center">
+
+						<h2><?php _e( get_the_title() , LANG ); ?>
 						</h2> <!-- /.pageInicio__slider__title -->
+
+						<h3><?php 
+								echo $subtitle = wp_strip_all_tags( get_the_content() );
+							?>
+						</h3> <!-- /.pageInicio__slider__subtitle -->
+						
+						<!-- Botón de Reserva -->
+						<a href="#" class="button_reserved">
+							<?php _e( 'Reservar ahora' , LANG ); ?>
+						</a>
+
 					</section> <!-- /.pageInicio__slider__content -->
+
 				</div> <!-- /.caption sft big_white -->	
 
+				<?php /*
 				<!-- Caption Contenido -->
 				<div class="caption sft big_white" data-x="480" data-y="323" data-speed="3000" data-start="1000" data-easing="easeInBack">
 					<section class="pageInicio__slider__content">
