@@ -1,3 +1,5 @@
+'use strict';
+
 var j = jQuery.noConflict();
 
 /**
@@ -130,6 +132,53 @@ function getWidthBrowser()
 			var slider = j(this).attr('data-slider');	
 			j("#"+slider).trigger('next.owl.carousel' , [900] );
 		});
+
+		/*|----------------------------------------------------------------------|*/
+		/*|-----  SCROLLBAR  - LIBRERIA SCROLLBAR DANGEROUES   -----|*/
+		/*|----------------------------------------------------------------------|*/
+		var selector_swiper = j('.swiper-container');
+
+		var swiper = new Swiper( '.swiper-container', {
+
+			// Optional parameters
+			direction     : 'horizontal',
+			loop          : true,
+			speed         : 700,
+			effect        : 'slide',
+
+			slidesPerView : typeof(selector_swiper.attr('data-items')) !== "undefined" ?  parseInt( selector_swiper.attr('data-items') ) : 3,
+
+			spaceBetween  : typeof(selector_swiper.attr('data-margins')) !== "undefined" ?  parseInt( selector_swiper.attr('data-margins') ) : 30,
+
+			// Responsive breakpoints
+			breakpoints: {
+			    // when window width is <= 320px
+			    320: {
+					slidesPerView     : typeof(selector_swiper.attr('data-items-mobile')) !== "undefined" ?  parseInt( selector_swiper.attr('data-items-mobile') ) : 1,
+
+					spaceBetweenSlides: 5
+			    },
+			},
+			
+			//Scrollbar:
+			scrollbar            : '.swiper-scrollbar',
+			scrollbarHide        : false,
+			scrollbarDraggable   : true,
+			crollbarSnapOnRelease: true,
+			
+			
+			// Disable preloading of all images
+			preloadImages        : false,
+			
+			// Enable lazy loading
+			lazyLoading          : true,
+			
+			//Mouse Keyboard / Mousewheel
+			mousewheelControl    : true ,
+
+
+		});
+
 
 
 		/*|----------------------------------------------------------------------|*/

@@ -30,10 +30,11 @@ function load_custom_scripts()
 	/**[Cargar SlideBar]**/
 	wp_enqueue_script('wp-slidebar-js', THEMEROOT . '/assets/js/vendor/slidebars.min.js', array('jquery'), '2.0.2', true);
 
+	/**[Cargar Scrollbar]**/
+	wp_enqueue_script('wp-scrollbar-js', THEMEROOT . '/assets/js/vendor/scrollbar/idangerous.swiper.scrollbar.js', array('jquery'), '2.4.1', true);	
+
 	//custom script
 	wp_enqueue_script('custom_script', THEMEROOT . '/assets/js/source/script.js', array('jquery'), '1.0' , true );
-
-
 
 }
 

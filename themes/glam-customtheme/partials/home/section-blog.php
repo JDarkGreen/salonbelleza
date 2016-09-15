@@ -17,49 +17,64 @@
 	<!-- Wrapper de Contenido / Contenedor Layout -->
 	<div class="pageWrapperLayout containerRelative">
 
-		<!-- Carousel Galeria de Clientes -->
-		<div id="carousel-blog" class="section__single_gallery js-carousel-gallery" data-items="3" data-items-responsive="1" data-margins="33" data-dots="false" data-autoplay="true" data-timeautoplay="5000">
+		<!-- Slider main container -->
+		<div id="carousel-blog" class="swiper-container" data-items="3" data-items-mobile="1" data-margins="30">
 
-			<?php  
-				#Obtener todos los servicios
-				$args = array(
-					'post_status'    => 'publish',
-					'post_type'      => 'post',
-					'posts_per_page' => -1,
-				);
+		    <!-- Additional required wrapper -->
+		    <div class="swiper-wrapper">
 
-				$posts = get_posts( $args );
+		    	<?php  
+					#Obtener todos las entradas del blog
+					$args = array(
+						'post_status'    => 'publish',
+						'post_type'      => 'post',
+						'posts_per_page' => -1,
+					);
+
+					$posts = get_posts( $args );
+				
+					foreach( $posts as $entrada ):
+				?> 
+
+		        <!-- Slides de Libreria - contenedor -->
+		        <div class="swiper-slide">
+		    		
+		    		<!-- Item preview de servicio -->
+					<article class="itemPostPreview containerRelative">    	
+
+						<!-- Imagen -->
+						<?php  
+							$feat_img = wp_get_attachment_url( get_post_thumbnail_id( $entrada->ID ) );
+						?>
+						<a href="<?= get_permalink( $entrada->ID ); ?>">
+
+							<figure class="featured-image containerRelative">
+
+								<!--img src="<?= $feat_img; ?>" alt="<?= $entrada->post_name; ?>" class="img-fluid d-block m-x-auto" /-->	
+
+								<img data-src="<?= $feat_img; ?>" class="swiper-lazy img-fluid d-block m-x-auto" />
+
+            					<div class="swiper-lazy-preloader"></div>			
+
+							</figure>
+						
+						</a><!-- /end of link -->
+
+						<!-- Nombre -->
+						<h2 class=""><?= $entrada->post_title; ?></h2>
+
+					</article> <!-- /.itemServicePreview -->
 			
-				foreach( $posts as $entrada ):
-			?> 
+		        </div> <!-- /.swipper-slide -->
 
-				<!-- Item preview de servicio -->
-				<article class="itemPostPreview containerRelative">
-					
-					<!-- Imagen -->
-					<?php  
-						$feat_img = wp_get_attachment_url( get_post_thumbnail_id( $entrada->ID ) );
-					?>
-					<a href="<?= get_permalink( $entrada->ID ); ?>">
+		    	<?php endforeach; ?>
+	
+		    </div> <!-- /.swiper-wrapper -->
+		    
+		    <!-- If we need scrollbar -->
+		    <div class="swiper-scrollbar"></div>
 
-						<figure class="featured-image containerRelative">
-							<!-- Link -->
-
-
-								<img src="<?= $feat_img; ?>" alt="<?= $entrada->post_name; ?>" class="img-fluid d-block m-x-auto" />				
-
-						</figure>
-					
-					</a><!-- /end of link -->
-
-					<!-- Nombre -->
-					<h2 class=""><?= $entrada->post_title; ?></h2>
-
-				</article> <!-- /.itemServicePreview -->
-
-			<?php endforeach; ?>
-
-		</div> <!-- /carousel-single-services -->
+		</div> <!-- /.swiper-container -->
 
 	</div> <!-- /pageWrapperLayout containerRelative -->
 	

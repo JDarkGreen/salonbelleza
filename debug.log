@@ -11,3 +11,5 @@
 [14-Sep-2016 22:41:07 UTC] PHP Parse error:  syntax error, unexpected 'person' (T_STRING), expecting ',' or ';' in C:\xampp\htdocs\salonbelleza\wp-content\themes\glam-customtheme\partials\home\section-staff.php on line 47
 [14-Sep-2016 22:41:10 UTC] PHP Parse error:  syntax error, unexpected 'person' (T_STRING), expecting ',' or ';' in C:\xampp\htdocs\salonbelleza\wp-content\themes\glam-customtheme\partials\home\section-staff.php on line 47
 [14-Sep-2016 22:41:12 UTC] PHP Parse error:  syntax error, unexpected 'person' (T_STRING), expecting ',' or ';' in C:\xampp\htdocs\salonbelleza\wp-content\themes\glam-customtheme\partials\home\section-staff.php on line 47
+[15-Sep-2016 17:42:05 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\xampp\htdocs\salonbelleza\wp-content\themes\glam-customtheme\partials\home\section-blog.php on line 75
+[15-Sep-2016 17:42:11 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\xampp\htdocs\salonbelleza\wp-content\themes\glam-customtheme\partials\home\section-blog.php on line 75
