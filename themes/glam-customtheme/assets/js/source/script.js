@@ -136,48 +136,62 @@ function getWidthBrowser()
 		/*|----------------------------------------------------------------------|*/
 		/*|-----  SCROLLBAR  - LIBRERIA SCROLLBAR DANGEROUES   -----|*/
 		/*|----------------------------------------------------------------------|*/
-		var selector_swiper = j('.swiper-container');
 
-		var swiper = new Swiper( '.swiper-container', {
+		//Instancias de la clase swiper
+		var swiperInstances = {};
 
-			// Optional parameters
-			direction     : 'horizontal',
-			loop          : true,
-			speed         : 700,
-			effect        : 'slide',
+		j(".swiper-container").each( function(index, element){
 
-			slidesPerView : typeof(selector_swiper.attr('data-items')) !== "undefined" ?  parseInt( selector_swiper.attr('data-items') ) : 3,
+			/*Elemento actual*/
+			var current_slider = j(this);
 
-			spaceBetween  : typeof(selector_swiper.attr('data-margins')) !== "undefined" ?  parseInt( selector_swiper.attr('data-margins') ) : 30,
+			/* Items por pagina */
+			var items_per_page = typeof(current_slider.attr('data-slides-per-view')) !== 'undefined' ? parseInt( current_slider.attr('data-slides-per-view') ) : 1;
 
-			// Responsive breakpoints
-			breakpoints: {
-			    // when window width is <= 320px
-			    320: {
-					slidesPerView     : typeof(selector_swiper.attr('data-items-mobile')) !== "undefined" ?  parseInt( selector_swiper.attr('data-items-mobile') ) : 1,
+			/* Márgenes */
+			var margins_item = typeof(current_slider.attr('data-space-between')) !== 'undefined' ? parseInt( current_slider.attr('data-space-between') ) : 10;
 
-					spaceBetweenSlides: 5
-			    },
-			},
-			
-			//Scrollbar:
-			scrollbar            : '.swiper-scrollbar',
-			scrollbarHide        : false,
-			scrollbarDraggable   : true,
-			crollbarSnapOnRelease: true,
-			
-			
-			// Disable preloading of all images
-			preloadImages        : false,
-			
-			// Enable lazy loading
-			lazyLoading          : true,
-			
-			//Mouse Keyboard / Mousewheel
-			mousewheelControl    : true ,
+			swiperInstances[index] = new Swiper( current_slider , {
 
+				// Optional parameters
+				direction     : 'horizontal',
+				loop          : true,
+				speed         : 700,
+				effect        : 'slide',
+
+				slidesPerView : items_per_page,
+
+				spaceBetween  : margins_item,
+
+				// Responsive breakpoints
+				breakpoints: {
+				    // when window width is <= 320px
+				    320: {
+						slidesPerView     : 1,
+						spaceBetweenSlides: 5
+				    },
+				},
+				
+				//Scrollbar:
+				scrollbar            : current_slider.find('.swiper-scrollbar')[0] ,
+				scrollbarHide        : false,
+				scrollbarDraggable   : true,
+				crollbarSnapOnRelease: true,
+				
+				
+				// Disable preloading of all images
+				preloadImages        : false,
+				
+				// Enable lazy loading
+				lazyLoading          : true,
+				
+				//Mouse Keyboard / Mousewheel
+				mousewheelControl    : true ,
+
+			});
 
 		});
+
 
 
 

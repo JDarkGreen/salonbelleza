@@ -104,6 +104,31 @@ function create_post_type(){
 		'menu_icon'   => 'dashicons-id',
 	);
 
+	/*|-----TESTIMONIOS ----------------------|*/
+	
+	$labels_testimony = array(
+		'name'               => __('Testimonios'),
+		'singular_name'      => __('Testimonio'),
+		'add_new'            => __('Nuevo Testimonio'),
+		'add_new_item'       => __('Agregar nuevo Testimonio'),
+		'edit_item'          => __('Editar Testimonio'),
+		'view_item'          => __('Ver Testimonio'),
+		'search_items'       => __('Buscar Testimonios'),
+		'not_found'          => __('Testimonio no encontrado'),
+		'not_found_in_trash' => __('Testimonio no encontrado en la papelera'),
+	);
+
+	$args_testimony = array(
+		'labels'      => $labels_testimony,
+		'has_archive' => true,
+		'public'      => true,
+		'hierachical' => false,
+		'supports'    => array('title','editor','excerpt','custom-fields','thumbnail','page-attributes' ),
+		'show_ui' => true,
+		'taxonomies'  => array( 'post_tag' ),
+		'menu_icon'   => 'dashicons-businessman',
+	);
+
 
 	/*|REGISTRAR|*/
 	
@@ -118,6 +143,9 @@ function create_post_type(){
 
 	#STAFF
 	register_post_type( 'theme-staff' , $args_staff );
+
+	#TESTIMONIO
+	register_post_type( 'theme-testimony' , $args_testimony );
 
 
 	flush_rewrite_rules();

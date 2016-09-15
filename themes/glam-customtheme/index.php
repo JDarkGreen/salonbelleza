@@ -79,6 +79,11 @@
 <!-- Incluir seccion blog -->
 <?php include( locate_template('partials/home/section-blog.php') ); ?>
 
+<!-- Incluir seccion miscelenaeo -->
+<?php include( locate_template('partials/home/section-miscelaneo.php') ); ?>
+
+
+
 
 <!-- Footer -->
 <?php get_footer(); ?>

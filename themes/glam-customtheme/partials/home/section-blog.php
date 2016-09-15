@@ -18,7 +18,8 @@
 	<div class="pageWrapperLayout containerRelative">
 
 		<!-- Slider main container -->
-		<div id="carousel-blog" class="swiper-container" data-items="3" data-items-mobile="1" data-margins="30">
+		<div id="carousel-blog" class="swiper-container" data-slides-per-view="3"
+		data-space-between="30">
 
 		    <!-- Additional required wrapper -->
 		    <div class="swiper-wrapper">
