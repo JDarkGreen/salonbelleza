@@ -13,7 +13,7 @@ $options       = get_option("theme_settings");
 $array_temp    = array();
 $options_theme = array();
 
-$post_options_theme = isset( $_POST['options_theme'] ) ?  $_POST['options_theme'] : '';
+$post_options_theme = isset( $_POST['options_theme'] ) ?  $_POST['options_theme'] : array();
 
 /** Combinar en un solo array **/
 for ( $i=0; $i < count($post_options_theme) ; $i++) 

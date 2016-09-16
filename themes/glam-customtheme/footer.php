@@ -49,6 +49,7 @@ $options = get_option("theme_settings");
 						<h2 class="title-footer"> <?= __("Redes Sociales" , LANG ); ?></h2>
 
 						<!-- Lista de Redes  -->
+						<?php include( locate_template('partials/social/menu-social.php') ); ?>
 
 					</div> <!-- /.itemFooter -->
 
@@ -63,7 +64,6 @@ $options = get_option("theme_settings");
 						<h2 class="title-footer"> <?= __("Contacto" , LANG ); ?></h2>
 
 						<!-- Lista de Contacto  -->
-						ul 
 
 						<!-- Texto web -->
 						<h2 class="texto-web"> www. <span>CentralGlam</span> .com </h2>

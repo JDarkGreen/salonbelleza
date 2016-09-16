@@ -53,27 +53,6 @@ function custom_social_yt_render()
 <?php add_settings_section( $id, $title, $callback, $page ); ?>
 * SECCION EMPRESA
 **/
-/**
-* SECCION RUC
-**/
-add_settings_section( PREFIX."_themePage_section_ruc" , __( 'Personalizar Ruc:' , 'LANG' ), 'custom_settings_section_ruc_callback', 'customThemePageEmpresa' );
-
-function custom_settings_section_ruc_callback()
-{ 
-	echo __( 'Coloca RUC correspondiente', 'LANG' );
-}
-
-//DIRECCIÓN
-add_settings_field( 'theme_ruc_text', __( 'Ruc Empresa:', 'LANG' ), 'custom_ruc_render', 'customThemePageEmpresa', PREFIX."_themePage_section_ruc" );
-//Renderizado 
-function custom_ruc_render() 
-{ 
-	$options = get_option( 'theme_settings' ); 
-	?>
-	<textarea name="theme_settings[theme_ruc_text]" id="" style="width:350px;height:120px;max-height:120px;"><?= !empty($options['theme_ruc_text']) ? $options['theme_ruc_text'] : "" ; ?> </textarea>
-	<?php
-}
-
 
 
 /**
@@ -131,7 +110,6 @@ function custom_cel2_render()
 }
 
 
-
 /**
 * SECCION EMAIL 
 **/
@@ -155,7 +133,6 @@ function custom_email_render()
 	<?php
 }
 
-
 /**
 * SECCION UBICACIÓN
 **/
@@ -173,10 +150,30 @@ function custom_address_render()
 { 
 	$options = get_option( 'theme_settings' ); 
 	?>
-	<textarea name="theme_settings[theme_address_text]" id="" style="width:550px;height:120px;max-height:120px;"><?= !empty($options['theme_address_text']) ? $options['theme_address_text'] : "" ; ?> </textarea>
+	<textarea name="theme_settings[theme_address_text]" id="" style="width:550px;height:120px;max-height:120px;"><?= !empty($options['theme_address_text']) ? $options['theme_address_text'] : "" ; ?></textarea>
 	<?php
 }
 
+/**
+* SECCION ATENCIÓN
+**/
+add_settings_section( PREFIX."_themePage_section_atention" , __( 'Personalizar Horario Atención:' , 'LANG' ), 'custom_settings_section_atention_callback', 'customThemePageEmpresa' );
+
+function custom_settings_section_atention_callback()
+{ 
+	echo __( 'Coloca horario de atención', 'LANG' );
+}
+
+//ATENCIÓN
+add_settings_field( 'theme_atention_text', __( 'Horario de atención:', 'LANG' ), 'custom_atention_render', 'customThemePageEmpresa', PREFIX."_themePage_section_atention" );
+//Renderizado 
+function custom_atention_render() 
+{ 
+	$options = get_option( 'theme_settings' ); 
+	?>
+	<textarea name="theme_settings[theme_atention_text]" id="" style="width:550px;height:120px;max-height:120px;"><?= !empty($options['theme_atention_text']) ? $options['theme_atention_text'] : "" ; ?></textarea>
+	<?php
+}
 
 
 /**

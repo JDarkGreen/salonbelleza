@@ -46,7 +46,7 @@ function custom_theme_settings_init()
 	//panel redes sociales
 	register_setting( 'customThemePageSocial' , 'theme_settings' );
 
-	//panel telefonos
+	//panel EMPRESA
 	register_setting( 'customThemePageEmpresa' , 'theme_settings' );
 
 	//panel información Header
@@ -105,9 +105,9 @@ function custom_theme_options_page()
 	        <a href="#" data-display="optionsSocialLinks" data-animation="slide" data-animationspeed="500"> 
 	       	<?= __("Redes Sociales" , LANG ); ?> </a>
 	       	
-			<!-- portBox Handler -->
-	        <a href="#" data-display="optionsSocialLinks" data-animation="slide" data-animationspeed="500"> 
-	       	<?= __("Personalización Empresa" , LANG ); ?> </a>   
+			<!-- portBox Handler Empresa -->
+	        <a href="#" data-display="optionsBusiness" data-animation="clip" data-animationspeed="500"> 
+	       	<?= __("Personalización Empresa ( Tel. , emails , etc )" , LANG ); ?> </a>   
 
 			<!-- portBox Handler -->
 	        <a href="#" data-display="optionsSocialLinks" data-animation="slide" data-animationspeed="500"> 
@@ -125,7 +125,7 @@ function custom_theme_options_page()
 
 	    <?php /*-------------------------------------------*/ ?>
 
-    	<!-- portBox Content -->
+    	<!-- portBox Content CUSTOM URLS  -->
 		<div id="optionsCustomUrl" class="portBox">
 			<?php
 				settings_fields( 'customThemeRewriteUrl' );
@@ -135,13 +135,23 @@ function custom_theme_options_page()
 			</button>
 		</div> <!---->
 
-    	<!-- portBox Content -->
+    	<!-- portBox Content REDES SOCIALES -->
 		<div id="optionsSocialLinks" class="portBox">
 			<?php
 				settings_fields( 'customThemePageSocial' );
 				do_settings_sections( 'customThemePageSocial' );
 			?>
 			<button class="js-update-ajax-options button button-primary" data-id="optionsSocialLinks"> Actualizar 
+			</button>
+		</div> <!---->
+
+    	<!-- portBox Content EMPRESA -->
+		<div id="optionsBusiness" class="portBox">
+			<?php
+				settings_fields( 'customThemePageEmpresa' );
+				do_settings_sections( 'customThemePageEmpresa' );
+			?>
+			<button class="js-update-ajax-options button button-primary" data-id="optionsBusiness"> Actualizar 
 			</button>
 		</div> <!---->
 

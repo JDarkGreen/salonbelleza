@@ -48,7 +48,7 @@
 	$admin_bar = is_admin_bar_showing() ? 'mainHeader__active-bar' : '';
 
 	# Extraemos el logo de las opciones del tema
-	$logo_theme = isset($options['theme_meta_logo_text']) && !empty($options['theme_meta_logo_text']) ? $options['theme_meta_logo_text'] : IMAGES . '/logo.jpg';
+	$logo_theme = isset($options['theme_meta_logo_text']) && !empty($options['theme_meta_logo_text']) ? $options['theme_meta_logo_text'] : IMAGES . '/salon_logo.png';
 
 ?>
 
@@ -89,7 +89,7 @@
 
 						<h1 class="mainLogo">
 							<a href="<?= site_url(); ?>">
-								<img src="<?= $logo_theme; ?>" alt="<?php bloginfo('description'); ?>" class="img-fluid" />
+								<img src="<?= $logo_theme; ?>" alt="<?php bloginfo('description'); ?>" class="img-fluid d-block m-x-auto" />
 							</a>
 						</h1> <!-- /.mainLogo -->
 						
