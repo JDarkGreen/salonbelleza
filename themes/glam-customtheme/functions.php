@@ -37,6 +37,20 @@ include('functions/constants.php');
 require('admin/custom/new-columns.php');
 
 
+/**
+* Setear scripts archvos css y javascript de la administracion del tema
+**/
+//css
+include('admin/assets/custom-styles.php');
+//javascript
+include('admin/assets/custom-scripts.php');
+
+/*-----------------
+* Opciones del tema
+*------------------*/
+require('admin/theme-customizer-modal.php');
+
+
 /*******************************************************************/
 /* 	Archivos de Condiguración en el Tema  */
 /*******************************************************************/

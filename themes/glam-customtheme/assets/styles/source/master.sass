@@ -159,12 +159,39 @@ body.admin-bar
 
 //SECCIÓN TESTIMONIO
 .itemTestimonio
-	color : white
+	color      : white
+	font-family: "SerifBeta",sans-serif
 	//Texto
 	.content-text
-		border    : 1px solid #c4a648
-		box-sizing: border-box 
-		padding   : 130px 50px 
+		border     : 1px solid #c4a648
+		box-sizing : border-box
+		height     : 180px
+		margin     : 40px 0 20px
+		padding    : 10px 130px
+	//Imagen
+	.content-image
+		justify-content: center 
+		figure 
+			+border-radius(50%)
+			height  : 52px 
+			height  : 52px 
+			margin  : 0 15px 
+			overflow: hidden 
+
+//
+#container-testimony
+	//bullet
+	.swiper-pagination-bullet
+		background: silver
+
+//Sobrescribir paginacion estilos
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction
+	bottom  : 0 !important
+	position: relative 
+
+
+
+
 
 /***************************************************************************************/
 /**-- SECCION RELACIONADA A SERVICIOS ------------------------------------------------**/

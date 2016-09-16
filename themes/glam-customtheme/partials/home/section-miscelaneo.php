@@ -26,7 +26,7 @@
 				</div> <!-- /.text-xs-center -->
 
 				<!-- Contenedor de testimonios -->
-				<section class="container-testimony swiper-container" data-slides-per-view="1" data-space-between="1">
+				<section id="container-testimony" class="swiper-container" data-slides-per-view="1" data-space-between="10">
 
 					<!-- Additional required wrapper -->
 				    <div class="swiper-wrapper">
@@ -49,12 +49,12 @@
 								<div class="itemTestimonio">
 									
 									<!-- Texto -->
-									<div class="content-text">
-										<?= $testimonio->post_content; ?>
+									<div class="content-text containerFlex containerAlignContent">
+										<em><?= $testimonio->post_content; ?></em>
 									</div><!-- /.content-text -->	
 									
 									<!-- Imágenes -->
-									<div class="content-image">
+									<div class="content-image containerFlex containerAlignContent">
 										
 										<!-- Imagen -->
 										<figure><?= get_the_post_thumbnail( $testimonio->ID , array(50) , 'img-fluid d-block' ); ?></figure>
@@ -70,6 +70,9 @@
 						<?php endforeach; ?>
 
 					</div> <!-- /.swiper-wrapper -->
+
+					<!-- If we need pagination -->
+    				<div class="swiper-pagination"></div>
 					
 				</section> <!-- /.container-testimony -->
 				
@@ -77,6 +80,9 @@
 
 			
 			<div class="col-xs-12 col-sm-5">
+				
+				<!-- Facebook  -->
+				<?php include( locate_template('partials/fan-page-facebook.php') ) ?>
 				
 			</div> <!-- /.col-xs-12 col-sm-5 -->
 

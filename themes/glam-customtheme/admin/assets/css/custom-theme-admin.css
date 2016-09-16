@@ -1,0 +1,84 @@
+/*keyframes*/
+@keyframes outline-pulse
+{
+	0%  { outline: 3px solid #A4C837;  }
+	50% { outline-offset: 4px;  }
+	90% { outline-offset: 0px; outline: 4px solid transparent; }
+	100%{ outline       : 0px solid transparent; }
+}
+
+@-moz-keyframes outline-pulse
+{
+	0%  { outline: 3px solid #A4C837;  }
+	50% { outline-offset: 4px;  }
+	90% { outline-offset: 0px; outline: 4px solid transparent; }
+	100%{ outline       : 0px solid transparent; }
+}
+
+/** [ Título de Opciones ]**/
+.title-options{ color : white; font-size: 30px; }
+
+/** [ Menu de Opciones ]**/
+.options__menu a{
+	background     : #A4C837;
+	color          : black;
+	display        : block;
+	margin         : 15px 0;
+	opacity        : .8;
+	padding        : 10px;
+	text-decoration: none !important;
+	transition     : all 500ms ease-in;
+	width          : 200px;
+}
+
+.options__menu a:hover , .options__menu a.active {
+	animation      : outline-pulse 1.2s ease-in infinite;
+	background     : black;
+	opacity        : 1;
+	outline-offset : 4px;
+	border         : none;
+	box-shadow     : none;
+	outline        : none;
+	text-decoration: none !important; 
+	color          : #A4C837;
+}
+
+/*------------------------------
+** FONDO DE ADMINISTRADOR EN SECCION DE OPCIONES
+*------------------------------*/
+
+.containerSectionOptions
+{
+	background     : url('../img/paisaje.gif') no-repeat;
+	background-size: cover;
+	bottom         : 0;
+	box-sizing     : border-box;
+	left           : 0;
+	padding        : 30px;
+	position       : absolute;
+	right          : 0;
+	top            : 0;
+}
+
+
+/****
+*** ESTILOS GALERIA DE IMÁGENES
+*****************************************************************/
+
+ul#js-containerSortableGallery li
+{
+	width         : 202px; 
+	height        : 120px; 
+	margin        : 0 10px 20px; 
+	display       : inline-block; 
+	vertical-align: top; 
+	position      : relative; 
+	float         : left; 
+	border        : 1px dotted;
+}
+
+.highlight
+{
+	background: black;
+	border    : 3px solid red !important;
+}

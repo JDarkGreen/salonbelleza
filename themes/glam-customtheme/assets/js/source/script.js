@@ -176,8 +176,11 @@ function getWidthBrowser()
 				scrollbar            : current_slider.find('.swiper-scrollbar')[0] ,
 				scrollbarHide        : false,
 				scrollbarDraggable   : true,
-				crollbarSnapOnRelease: true,
+				scrollbarSnapOnRelease: true,
 				
+				//Pagination 
+				pagination           : current_slider.find('.swiper-pagination')[0] ,
+				paginationClickable	 : true,
 				
 				// Disable preloading of all images
 				preloadImages        : false,
