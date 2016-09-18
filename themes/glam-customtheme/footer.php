@@ -27,7 +27,7 @@ $options = get_option("theme_settings");
 					<div class="itemFooter">
 						
 						<!-- Logo -->
-						<img src="<?= IMAGES ?>/salon_logo.png" alt="<?php bloginfo('description') ?>" class="img-fluid d-block m-x-auto" />
+						<img src="<?= IMAGES ?>/salon_logo.png" alt="<?php bloginfo('description') ?>" class="img-fluid d-block m-x-auto" /> <br />
 
 						<?php  
 							#Presentación Footer
@@ -46,7 +46,7 @@ $options = get_option("theme_settings");
 					<div class="itemFooter">
 						
 						<!-- Título-->
-						<h2 class="title-footer"> <?= __("Redes Sociales" , LANG ); ?></h2>
+						<h2 class="title-footer text-xs-center"> <?= __("Redes Sociales" , LANG ); ?></h2>
 
 						<!-- Lista de Redes  -->
 						<?php include( locate_template('partials/social/menu-social.php') ); ?>
@@ -89,8 +89,13 @@ $options = get_option("theme_settings");
 
 							<!--  -->
 							<li>
-								<span>Atención:</span>
-								<?= isset($options['theme_atention_text']) ? apply_filters( 'the_content', $options['theme_atention_text'] ) : ''; ?>
+								<span>Atención: </span>
+								<?= isset($options['theme_atention_text']) ? $options['theme_atention_text'] : ''; ?>
+							</li>
+
+							<!-- Dirección -->
+							<li>
+								<?= isset($options['theme_address_text']) ? apply_filters( 'the_content' , $options['theme_address_text'] ) : ''; ?>
 							</li>
 							
 						</ul> <!-- /.menuContactoFooter -->
