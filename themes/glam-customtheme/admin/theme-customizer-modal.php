@@ -118,7 +118,7 @@ function custom_theme_options_page()
 	       	<?= __("Personalización Header" , LANG ); ?> </a>
 
 			<!-- portBox Handler -->
-	        <a href="#" data-display="optionsFooter" data-animation="shake" data-animationspeed="500"> 
+	        <a href="#" data-display="optionsFooter" data-animation="bounce" data-animationspeed="500"> 
 	       	<?= __("Personalización Footer" , LANG ); ?> </a>
 
 	    </div> <!-- /.options__menu -->

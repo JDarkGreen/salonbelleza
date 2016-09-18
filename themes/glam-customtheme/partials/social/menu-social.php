@@ -23,10 +23,10 @@ $options = get_option("theme_settings");
 	<?php endif; ?>	
 
 	<!-- Instagram -->
-	<?php if( isset($options['theme_social_insta_text']) && !empty($options['theme_social_insta_text']) ): ?>
+	<?php if( isset($options['theme_social_instagram_text']) && !empty($options['theme_social_instagram_text']) ): ?>
 
 		<li>
-			<a href="<?= $options['theme_social_insta_text']; ?>" target="_blank" class="icon-social">
+			<a href="<?= $options['theme_social_instagram_text']; ?>" target="_blank" class="icon-social">
 				<i class="fa fa-instagram" aria-hidden="true"></i>
 			</a>
 		</li>

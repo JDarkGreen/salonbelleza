@@ -27,7 +27,7 @@ $options = get_option("theme_settings");
 					<div class="itemFooter">
 						
 						<!-- Logo -->
-						<img src="<?= IMAGES ?>/logo.jpg" alt="<?php bloginfo('description') ?>" class="img-fluid d-block m-x-auto" />
+						<img src="<?= IMAGES ?>/salon_logo.png" alt="<?php bloginfo('description') ?>" class="img-fluid d-block m-x-auto" />
 
 						<?php  
 							#Presentación Footer
@@ -64,9 +64,41 @@ $options = get_option("theme_settings");
 						<h2 class="title-footer"> <?= __("Contacto" , LANG ); ?></h2>
 
 						<!-- Lista de Contacto  -->
+						<ul class="menuContactoFooter">
+							
+							<!--  -->
+							<li>
+								<span>Tel.:</span>
+								<?php  
+									for ( $i=1 ;  $i <= 5 ;  $i++) 
+									{ 
+										$phone = isset($options['theme_phone_text_'.$i]) ? $options['theme_phone_text_'.$i] : '';
+
+										echo $i !== 1 && !empty($phone) ? ' - ' : '';
+										echo $phone;
+
+									}
+								?>
+							</li>
+
+							<!--  -->
+							<li>
+								<span>Email:</span>
+								<?= isset($options['theme_email_text']) ? $options['theme_email_text'] : ''; ?>
+							</li>
+
+							<!--  -->
+							<li>
+								<span>Atención:</span>
+								<?= isset($options['theme_atention_text']) ? apply_filters( 'the_content', $options['theme_atention_text'] ) : ''; ?>
+							</li>
+							
+						</ul> <!-- /.menuContactoFooter -->
 
 						<!-- Texto web -->
 						<h2 class="texto-web"> www. <span>CentralGlam</span> .com </h2>
+
+
 
 					</div> <!-- /.itemFooter -->
 

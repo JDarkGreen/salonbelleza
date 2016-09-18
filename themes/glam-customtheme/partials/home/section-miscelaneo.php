@@ -57,7 +57,11 @@
 									<div class="content-image containerFlex containerAlignContent">
 										
 										<!-- Imagen -->
-										<figure><?= get_the_post_thumbnail( $testimonio->ID , array(50) , 'img-fluid d-block' ); ?></figure>
+										<figure>
+											<?php  
+												echo get_the_post_thumbnail( $testimonio->ID , array(50,50) , array('class'=>'img-fluid d-block') );
+											?>
+										</figure>
 
 										<?= $testimonio->post_title; ?>
 

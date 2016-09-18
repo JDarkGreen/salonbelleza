@@ -1,179 +1,21 @@
-<?php /** * Plantilla Configuración del Tema **/
+<?php /**------ Plantilla Configuración del Tema ----------**/
 
-/**
-<?php add_settings_section( $id, $title, $callback, $page ); ?>
+/*------------------------------*
 * SECCION REDES SOCIALES
-
-//Inputs
-add_settings_field( $id, $title, $callback, $page, $section, $args );
-**/
-add_settings_section( PREFIX."_themePage_section_social" , __( 'Redes Sociales:' , 'LANG' ), 'custom_settings_section_callback', 'customThemePageSocial' );
-
-function custom_settings_section_callback()
-{ 
-	echo __( 'Coloca los links de redes sociales correspondientes', 'LANG' );
-}
-
-//FACEBOOK
-add_settings_field( 'theme_social_fb_text', __( 'Link Facebook', 'LANG' ), 'custom_social_fb_render', 'customThemePageSocial', PREFIX."_themePage_section_social" );
-//Renderizado 
-function custom_social_fb_render() 
-{ 
-	$options = get_option( 'theme_settings' ); 
-	?>
-	<input type='text' style="width:400px;" class="js-field-ajax" id="theme_social_fb_text" name='theme_settings[theme_social_fb_text]' value='<?= !empty($options['theme_social_fb_text']) ? $options['theme_social_fb_text'] : "" ; ?>'>
-	<?php
-}
-
-//TWITTER
-add_settings_field( 'theme_social_twitter_text', __( 'Link Twitter', 'LANG' ), 'custom_social_tw_render', 'customThemePageSocial', PREFIX."_themePage_section_social" );
-//Renderizado 
-function custom_social_tw_render() 
-{ 
-	$options = get_option( 'theme_settings' ); 
-	?>
-	<input type='text' style="width:400px;" class="js-field-ajax" id="theme_social_twitter_text" name='theme_settings[theme_social_twitter_text]' value='<?= !empty($options['theme_social_twitter_text']) ? $options['theme_social_twitter_text'] : "" ; ?>'>
-	<?php
-}
-
-//youtube
-add_settings_field( 'theme_social_youtube_text', __( 'Link Youtube', 'LANG' ), 'custom_social_yt_render', 'customThemePageSocial', PREFIX."_themePage_section_social" );
-//Renderizado 
-function custom_social_yt_render() 
-{ 
-	$options = get_option( 'theme_settings' ); 
-	?>
-	<input type='text' style="width:400px;" class="js-field-ajax" id="theme_social_youtube_text" name='theme_settings[theme_social_youtube_text]' value='<?= !empty($options['theme_social_youtube_text']) ? $options['theme_social_youtube_text'] : "" ; ?>'>
-	<?php
-}
+*------------------------------*/
+include('template-fields/social-fields.php');
 
 
-
-/**
-<?php add_settings_section( $id, $title, $callback, $page ); ?>
+/*------------------------------*
 * SECCION EMPRESA
-**/
+*------------------------------*/
+include('template-fields/empresa-fields.php');
 
+/*------------------------------*
+* SECCION FOOTER
+*------------------------------*/
+include('template-fields/footer-fields.php');
 
-/**
-//TELEFONOS
-add_settings_field( $id, $title, $callback, $page, $section, $args );
-**/
-add_settings_section( PREFIX."_themePage_section_phone" , __( 'Personalizar Teléfonos:' , 'LANG' ), 'custom_settings_section_phone_callback', 'customThemePageEmpresa' );
-
-function custom_settings_section_phone_callback()
-{ 
-	echo __( 'Coloca los números correspondientes', 'LANG' );
-}
-
-//TELEFONOS
-add_settings_field( 'theme_phone_text', __( 'Numero Telefono', 'LANG' ), 'custom_phone_render', 'customThemePageEmpresa', PREFIX."_themePage_section_phone" );
-//Renderizado 
-function custom_phone_render() 
-{ 
-	$options = get_option( 'theme_settings' ); 
-	?>
-	<input type='text' name='theme_settings[theme_phone_text][0]' value='<?= !empty($options['theme_phone_text'][0]) ? $options['theme_phone_text'][0] : "" ; ?>'>
-	<?php
-}
-
-//TELEFONOS
-add_settings_field( 'theme_phone_text2', __( 'Numero Telefono 2', 'LANG' ), 'custom_phone2_render', 'customThemePageEmpresa', PREFIX."_themePage_section_phone" );
-//Renderizado 
-function custom_phone2_render() 
-{ 
-	$options = get_option( 'theme_settings' ); 
-	?>
-	<input type='text' name='theme_settings[theme_phone_text][1]' value='<?= !empty($options['theme_phone_text'][1]) ? $options['theme_phone_text'][1] : "" ; ?>'>
-	<?php
-}
-
-//CELULAR
-add_settings_field( 'theme_cel_text1', __( 'Numero Celular', 'LANG' ), 'custom_cel_render', 'customThemePageEmpresa', PREFIX."_themePage_section_phone" );
-//Renderizado 
-function custom_cel_render() 
-{ 
-	$options = get_option( 'theme_settings' ); 
-	?>
-	<input type='text' name='theme_settings[theme_cel_text][0]' value='<?= !empty($options['theme_cel_text'][0]) ? $options['theme_cel_text'][0] : "" ; ?>'>
-	<?php
-}
-//CELULAR 2
-add_settings_field( 'theme_cel_text2', __( 'Numero Celular 2', 'LANG' ), 'custom_cel2_render', 'customThemePageEmpresa', PREFIX."_themePage_section_phone" );
-//Renderizado 
-function custom_cel2_render() 
-{ 
-	$options = get_option( 'theme_settings' ); 
-	?>
-	<input type='text' name='theme_settings[theme_cel_text][1]' value='<?= !empty($options['theme_cel_text'][1]) ? $options['theme_cel_text'][1] : "" ; ?>'>
-	<?php
-}
-
-
-/**
-* SECCION EMAIL 
-**/
-add_settings_section( PREFIX."_themePage_section_email" , __( 'Personalizar Email:' , 'LANG' ), 'custom_settings_section_email_callback', 'customThemePageEmpresa' );
-
-function custom_settings_section_email_callback()
-{ 
-	echo __( 'Coloca email(s) correspondientes', 'LANG' );
-}
-
-//EMAIL
-add_settings_field( 'theme_email_text', __( 'Email Empresa:', 'LANG' ), 'custom_email_render', 'customThemePageEmpresa', PREFIX."_themePage_section_email" );
-//Renderizado 
-function custom_email_render() 
-{ 
-	$options = get_option( 'theme_settings' ); 
-
-	#var_dump($options);
-	?>
-	<input type='text' size="50" name='theme_settings[theme_email_text]' value='<?= !empty($options['theme_email_text']) ? $options['theme_email_text'] : "" ; ?>'>
-	<?php
-}
-
-/**
-* SECCION UBICACIÓN
-**/
-add_settings_section( PREFIX."_themePage_section_address" , __( 'Personalizar Dirección:' , 'LANG' ), 'custom_settings_section_address_callback', 'customThemePageEmpresa' );
-
-function custom_settings_section_address_callback()
-{ 
-	echo __( 'Coloca dirección correspondiente', 'LANG' );
-}
-
-//DIRECCIÓN
-add_settings_field( 'theme_address_text', __( 'Dirección Empresa:', 'LANG' ), 'custom_address_render', 'customThemePageEmpresa', PREFIX."_themePage_section_address" );
-//Renderizado 
-function custom_address_render() 
-{ 
-	$options = get_option( 'theme_settings' ); 
-	?>
-	<textarea name="theme_settings[theme_address_text]" id="" style="width:550px;height:120px;max-height:120px;"><?= !empty($options['theme_address_text']) ? $options['theme_address_text'] : "" ; ?></textarea>
-	<?php
-}
-
-/**
-* SECCION ATENCIÓN
-**/
-add_settings_section( PREFIX."_themePage_section_atention" , __( 'Personalizar Horario Atención:' , 'LANG' ), 'custom_settings_section_atention_callback', 'customThemePageEmpresa' );
-
-function custom_settings_section_atention_callback()
-{ 
-	echo __( 'Coloca horario de atención', 'LANG' );
-}
-
-//ATENCIÓN
-add_settings_field( 'theme_atention_text', __( 'Horario de atención:', 'LANG' ), 'custom_atention_render', 'customThemePageEmpresa', PREFIX."_themePage_section_atention" );
-//Renderizado 
-function custom_atention_render() 
-{ 
-	$options = get_option( 'theme_settings' ); 
-	?>
-	<textarea name="theme_settings[theme_atention_text]" id="" style="width:550px;height:120px;max-height:120px;"><?= !empty($options['theme_atention_text']) ? $options['theme_atention_text'] : "" ; ?></textarea>
-	<?php
-}
 
 
 /**
@@ -567,39 +409,6 @@ function custom_theme_organizational_structure_render()
 		
 	<?php
 }
-
-
-
-
-
-/**
-<?php add_settings_section( $id, $title, $callback, $page ); ?>
-* PERSONALIZAR FOOTER
-
-//Inputs
-add_settings_field( $id, $title, $callback, $page, $section, $args );
-**/
-add_settings_section( PREFIX."_themePage_footer" , __( 'Personalizar Footer:' , 'LANG' ), 'custom_settings_footer_callback', 'customThemePageFooter' );
-
-function custom_settings_footer_callback()
-{ 
-	echo __( 'Personaliza los campos correspondientes:', 'LANG' );
-}
-
-//TEXTO FOOTER
-add_settings_field( 'theme_footer_text', __( 'Texto Presentación', 'LANG' ), 'custom_footer_text_render', 'customThemePageFooter', PREFIX."_themePage_footer" );
-//Renderizado 
-function custom_footer_text_render() 
-{ 
-	$options = get_option( 'theme_settings' ); 
-?>
-
-	<textarea class="js-field-ajax" name="theme_settings[theme_footer_text]" id="theme_footer_text" style="width:400px;height:100px;max-height:100px;"><?= !empty($options['theme_footer_text']) ? $options['theme_footer_text'] : "" ; ?></textarea>	
-		
-	<?php
-}
-
-
 
 /*--------------------------------------------------------------------------------*/
 
