@@ -83,7 +83,5 @@
 <?php include( locate_template('partials/home/section-miscelaneo.php') ); ?>
 
 
-
-
 <!-- Footer -->
 <?php get_footer(); ?>

@@ -3,7 +3,6 @@
 /**-- SECCION RELACIONADA AL BLOG ---------------------------------------------------**/
 /***************************************************************************************/
 
-
 .pageInicioBlog
 	background: #F7F7F7
 	padding   : 60px 0 
@@ -53,3 +52,61 @@
 		color      : black 
 		font-family: "SerifBeta", sans-serif
 		font-size  : 24px
+
+
+/**[ CONTENEDOR DE PÁGINA BLOG ]**/
+.pageBlogContent
+	/** Items previos de Página **/
+	.itemPostPreview
+		box-sizing  : border-box 
+		margin-right: 23px
+		padding     : 0 0 40px
+		width       : calc( (100%/3) - ( (2 * 23px ) / 3 ) )
+		//3rd element
+		&:nth-child(3)
+			margin: 0
+
+		//Imagen
+		figure 
+			margin: 0 auto 20px
+
+		//Título
+		h2
+			font-size  : 14px
+			font-weight: 600
+			line-height: 1.4
+
+
+
+/***************************************************************************************/
+/**-- SIDEBAR DE CATEGORIAS --------------------------------------------------**/
+/***************************************************************************************/
+
+.sidebarCategories
+	font-family : "SerifBeta", sans-serif
+
+	//Título 
+	h2.title-sidebar
+		border     : 1px solid #D0A63E
+		color      : black 
+		font-size  : 19px 
+		font-weight: 600
+		line-height: 1
+		margin     : 0 auto 12px
+		padding    : 17px 25px 
+
+	//Item Link
+	a.item-link
+		border-bottom  : 1px solid rgba(0,0,0,.1)
+		color          : #8A8A8A
+		display        : block 
+		padding        : 13px 0
+		text-decoration: none !important
+		+transition( all 500ms ease-in )
+		//Icon
+		i 
+			font-size: 10px
+			margin   : 0 10px 0 0
+		//:hover 
+		&:hover , &.active
+			color : #D0A63E

@@ -66,9 +66,9 @@ function cd_mb_slider_revolution_cb( $post )
     <?php    
 }
 //guardar la data
-add_action( 'save_post', 'cd_mb_code_product_save' );
+add_action( 'save_post', 'cd_mb_slider_select_save' );
 
-function cd_mb_code_product_save( $post_id )
+function cd_mb_slider_select_save( $post_id )
 {
     // Bail if we're doing an auto save
     if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;

@@ -60,6 +60,26 @@ img.aligncenter, img.alignright, img.alignleft
 /***************************************************************************************/
 //Banner de Páginas
 .pageCommon__banner
+	background : #F0F0F0
+	color      : #C4A648
+	font-family: "Casloncp", sans-serif
+	padding    : 22px 0
+
+	//Título
+	h2.title-page
+		margin     : 0 
+		line-height: 1
+		position: relative 
+		//after
+		&:after 
+			+border-radius( 50% )
+			background    : #C4A648
+			content       : ""
+			display       : inline-block
+			height        : 8px 
+			vertical-align: middle 
+			width         : 8px 
+
 	//Imagen
 	figure 
 		background-size: cover 
@@ -407,7 +427,7 @@ img.aligncenter, img.alignright, img.alignleft
 		text-decoration: none 
 		//HOVER AND ACTIVE 
 		&:hover , &.active 
-			background: #065BA0
+			background: #D0A63E
 			color     : white 
 
 

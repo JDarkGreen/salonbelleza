@@ -51,11 +51,19 @@ nav.mainNavigation
 			display    : inline-block
 			line-height: 1 
 			padding    : 22px 10px
+			position   : relative
+
+			//Active and current
+			&.current-menu-item , &.current_page_item
+				a 
+					color : #CEA73E
+			
 			//Last element
 			&:last-child
 				a 
 					&:after 
 						background: transparent
+			//Links
 			a 
 				+transition( all 500ms cubic-bezier(.5,.5,.5,1) )
 				color          : black
@@ -75,5 +83,25 @@ nav.mainNavigation
 				//hover
 				&:hover 
 					color : #CEA73E
+			
+			//Hover
+			&:hover 
+				//ul 
+				ul.sub-menu 
+					+opacity( 1 )
+					visibility: visible
+					top       : 100%
 
-
+	//Submenu
+	ul.sub-menu
+		+opacity( 0 )
+		+transition( all 500ms ease-in )
+		background: rgba( 0,0,0,.1 )
+		position  : absolute
+		top       : 110%
+		visibility: hidden
+		z-index   : 999
+		li 
+			padding: 10px 15px
+			a 
+				line-height: 1em

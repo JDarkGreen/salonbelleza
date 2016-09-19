@@ -19,5 +19,17 @@ global $post;
 include("metabox/slider-home/mb_revolution_slider.php");
 
 
+/******************************************************************/
+/**- SERVICIOS **/
+/******************************************************************/
+
+/**[ INCLUIR METABOX DE MULTIPLES DATOS ]**/
+include("metabox/services/mb_service_cortes.php");
+include("metabox/services/mb_service_color.php");
+include("metabox/services/mb_service_care.php");
+include("metabox/services/mb_service_lisos.php");
+include("metabox/services/mb_service_makeup.php");
+
+
 
 
