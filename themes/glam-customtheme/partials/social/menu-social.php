@@ -9,13 +9,13 @@ $options = get_option("theme_settings");
 
 ?>
 
-<ul id="socialLinksMenu">
+<ul id="socialLinksMenu" class="text-xs-center">
 	
 	<!-- Facebook -->
-	<?php if( LINK_FACEBOOK !== null && !empty(LINK_FACEBOOK) ): ?>
+	<?php if( defined('LINK_FACEBOOK') && constant('LINK_FACEBOOK') !== "" ): ?>
 
 		<li>
-			<a href="<?= LINK_FACEBOOK; ?>" target="_blank" class="icon-social">
+			<a href="<?= constant('LINK_FACEBOOK'); ?>" target="_blank" class="icon-social">
 				<i class="fa fa-facebook" aria-hidden="true"></i>
 			</a>
 		</li>

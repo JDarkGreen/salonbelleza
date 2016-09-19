@@ -18,7 +18,7 @@
 
 
 <!-- Wrapper de Contenido / Contenedor Layout -->
-<div class="pageWrapperLayout">
+<div class="pageWrapperLayout containerRelative">
 
 	<?php  
 		/**
@@ -58,13 +58,13 @@
 				</div> <!-- /.content-text -->
 				
 			</div> <!-- /.col-xs-12 col-sm-6 -->
-			
-			<!-- Imagen -->
-			<div class="col-xs-12 col-sm-6">
-				<?= get_the_post_thumbnail( $page_conocenos->ID , 'full' , array('class'=>'img-fluid d-block') ); ?>
-			</div> <!-- /.col-xs-12 col-sm-6 -->
 
 		</div>
+
+		<!-- Imagen -->
+		<figure class="image-about-our">
+			<?= get_the_post_thumbnail( $page_conocenos->ID , 'full' , array('class'=>'img-fluid d-block') ); ?>
+		</figure> <!-- / -->
 		
 	</section> <!-- /.sectionCommonNosotros -->
 

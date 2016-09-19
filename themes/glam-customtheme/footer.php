@@ -63,6 +63,8 @@ $options = get_option("theme_settings");
 						<!-- Título-->
 						<h2 class="title-footer"> <?= __("Contacto" , LANG ); ?></h2>
 
+						<!-- Espacio --> <br /> 
+
 						<!-- Lista de Contacto  -->
 						<ul class="menuContactoFooter">
 							
@@ -99,6 +101,8 @@ $options = get_option("theme_settings");
 							</li>
 							
 						</ul> <!-- /.menuContactoFooter -->
+
+						<!-- Espacio --> <br /> 
 
 						<!-- Texto web -->
 						<h2 class="texto-web"> www. <span>CentralGlam</span> .com </h2>
