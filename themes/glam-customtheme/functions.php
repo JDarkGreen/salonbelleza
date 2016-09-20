@@ -71,6 +71,12 @@ require('functions/register-type-posts.php');
 
 require('functions/register-metabox.php');
 
+/*-----------------
+/* Registrar Taxonomias
+*------------------*/
+
+require('functions/register-taxonomies.php');
+
 
 /*-----------------
 /* Soporte de tema
@@ -82,6 +88,4 @@ require('functions/support-formats.php');
 *------------------*/
 
 require_once('functions/scripts-js.php');
-
-
 

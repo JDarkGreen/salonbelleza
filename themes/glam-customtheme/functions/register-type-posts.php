@@ -55,30 +55,6 @@ function create_post_type(){
 		'menu_icon'   => 'dashicons-chart-pie',
 	);
 
-	/*|-----PRODUCTOS ----------------------|*/
-	
-	$labels_gallery = array(
-		'name'               => __('Gal. Imágenes'),
-		'singular_name'      => __('Gal. Imágen'),
-		'add_new'            => __('Nuevo Gal. Imágen'),
-		'add_new_item'       => __('Agregar nuevo Gal. Imágen'),
-		'edit_item'          => __('Editar Gal. Imágen'),
-		'view_item'          => __('Ver Gal. Imágen'),
-		'search_items'       => __('Buscar Gal. Imágens'),
-		'not_found'          => __('Gal. Imágen no encontrado'),
-		'not_found_in_trash' => __('Gal. Imágen no encontrado en la papelera'),
-	);
-
-	$args_gallery = array(
-		'labels'      => $labels_gallery,
-		'has_archive' => true,
-		'public'      => true,
-		'hierachical' => false,
-		'supports'    => array('title','editor','excerpt','custom-fields','thumbnail','page-attributes' ),
-		'show_ui' => true,
-		'taxonomies'  => array( 'post_tag' ),
-		'menu_icon'   => 'dashicons-format-gallery',
-	);
 	/*|-----STAFF ----------------------|*/
 	
 	$labels_staff = array(
@@ -129,6 +105,56 @@ function create_post_type(){
 		'menu_icon'   => 'dashicons-businessman',
 	);
 
+	/*|-----IMAGENES ----------------------|*/
+	
+	$labels_images = array(
+		'name'               => __('Gal. Imágenes'),
+		'singular_name'      => __('Imágen'),
+		'add_new'            => __('Nueva Imágen'),
+		'add_new_item'       => __('Agregar nueva Imágen'),
+		'edit_item'          => __('Editar Imágen'),
+		'view_item'          => __('Ver Imágen'),
+		'search_items'       => __('Buscar Imágen'),
+		'not_found'          => __('Imágen no encontrada'),
+		'not_found_in_trash' => __('Imágen no encontrada en la papelera'),
+	);
+
+	$args_images = array(
+		'labels'      => $labels_images,
+		'has_archive' => true,
+		'public'      => true,
+		'hierachical' => false,
+		'supports'    => array('title','editor','excerpt','custom-fields','thumbnail','page-attributes' ),
+		'show_ui' => true,
+		'taxonomies'  => array( 'post_tag' ),
+		'menu_icon'   => 'dashicons-images-alt2',
+	);
+
+	/*|-----VIDEOS ----------------------|*/
+	
+	$labels_videos = array(
+		'name'               => __('Gal. Videos'),
+		'singular_name'      => __('Video'),
+		'add_new'            => __('Nuevo Video'),
+		'add_new_item'       => __('Agregar nuevo Video'),
+		'edit_item'          => __('Editar Video'),
+		'view_item'          => __('Ver Video'),
+		'search_items'       => __('Buscar Video'),
+		'not_found'          => __('Video no encontrado'),
+		'not_found_in_trash' => __('Video no encontrado en la papelera'),
+	);
+
+	$args_videos = array(
+		'labels'      => $labels_videos,
+		'has_archive' => true,
+		'public'      => true,
+		'hierachical' => false,
+		'supports'    => array('title','editor','excerpt','custom-fields','thumbnail','page-attributes' ),
+		'show_ui' => true,
+		'taxonomies'  => array( 'post_tag' ),
+		'menu_icon'   => 'dashicons-video-alt2',
+	);
+
 
 	/*|REGISTRAR|*/
 	
@@ -138,14 +164,17 @@ function create_post_type(){
 	#SERVICIOS
 	register_post_type( 'theme-services' , $args_services );
 
-	#GALERIA IMAGENES
-	register_post_type( 'theme-gallery-images' , $args_gallery );
-
 	#STAFF
 	register_post_type( 'theme-staff' , $args_staff );
 
 	#TESTIMONIO
 	register_post_type( 'theme-testimony' , $args_testimony );
+
+	#IMÁGENES
+	register_post_type( 'theme-images' , $args_images );
+
+	#VIDEOS
+	register_post_type( 'theme-videos' , $args_videos );
 
 
 	flush_rewrite_rules();

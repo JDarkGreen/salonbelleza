@@ -33,6 +33,11 @@ function load_custom_scripts()
 	/**[Cargar Scrollbar]**/
 	wp_enqueue_script('wp-scrollbar-js', THEMEROOT . '/assets/js/vendor/scrollbar/idangerous.swiper.scrollbar.js', array('jquery'), '2.4.1', true);	
 
+
+	/**[Cargar Isotope]**/
+	wp_enqueue_script('wp-isotope-js', THEMEROOT . '/assets/js/vendor/isotope.pkgd.min.js', array('jquery'), '3.0.0', true);	
+
+
 	//custom script
 	wp_enqueue_script('custom_script', THEMEROOT . '/assets/js/source/script.js', array('jquery'), '1.0' , true );
 

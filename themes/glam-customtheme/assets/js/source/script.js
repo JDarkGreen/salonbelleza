@@ -61,7 +61,7 @@ function getWidthBrowser()
 
 
 
-/*|----------------------------------------------------------------------|*/
+		/*|----------------------------------------------------------------------|*/
 		/*|-----  CAROUSEL ITEMS OWN CAROUSEL - SETEAR PARAMETROS   -----|*/
 		/*|----------------------------------------------------------------------|*/		
 
@@ -212,6 +212,39 @@ function getWidthBrowser()
 
 
 		/*|----------------------------------------------------------------------|*/
+		/*|-----  ISOTOPE    -----|*/
+		/*|----------------------------------------------------------------------|*/
+
+		var container_isotope = j(".js-containerIsotope");
+
+		if( container_isotope.length ){
+			//Isotope
+			container_isotope.isotope({
+				// options
+				itemSelector: '.js-item-isotope',
+				layoutMode  : 'fitRows',
+			});
+
+			//Filtros
+			j('.filter-button-group').on( 'click', 'button', function() {
+
+			 	var filterValue = j(this).attr('data-filter');
+				container_isotope.isotope({ filter: filterValue });
+
+				//activar elemento actual
+				j('.filter-button-group button').removeClass('active');
+				j(this).addClass('active');
+
+				//Si no encuentra contenido
+				if ( !container_isotope.data('isotope').filteredItems.length ) {
+				    j('#message-isotope').fadeIn('slow');
+				} else { j('#message-isotope').fadeOut('fast'); }
+				
+			});
+		}
+
+
+		/*|----------------------------------------------------------------------|*/
 		/*|-----  VALIDAR FORMULARIO   -----|*/
 		/*|----------------------------------------------------------------------|*/
 
@@ -244,6 +277,9 @@ function getWidthBrowser()
 			}); 
 
 		}
+
+
+
 
 
 
