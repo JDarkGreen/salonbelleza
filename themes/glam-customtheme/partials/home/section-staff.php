@@ -11,7 +11,8 @@
 	<h2 class="titleCommon__section"> Nuestro Staff </h2>
 	<!-- Subtitulo -->
 	<h3 class="subtitleCommon__section"> 
-		<span class="decoration"></span>
+		<span class="decoration"> // </span>
+		
 		El equipo de profesionales
 	</h3>
 

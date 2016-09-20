@@ -20,7 +20,7 @@
 					<h2 class="title"> Clientes sobre nosotros </h2>
 					
 					<h3 class="subtitleCommon__section"> 
-						<span class="decoration"></span> Hacemos belleza
+						<span class="decoration"> // </span> Hacemos belleza
 					</h3> <!-- /. -->
 					
 				</div> <!-- /.text-xs-center -->

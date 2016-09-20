@@ -11,7 +11,7 @@
 	<h2 class="titleCommon__section"> Servicios </h2>
 	
 	<h3 class="subtitleCommon__section"> 
-		<span class="decoration"></span>
+		<span class="decoration"> // </span>
 
 		Te ofrecemos lo último en belleza 
 	</h3>

@@ -11,7 +11,7 @@
 	<h2 class="titleCommon__section"> Blog </h2>
 	
 	<h3 class="subtitleCommon__section"> 
-		<span class="decoration"></span> Hacemos belleza
+		<span class="decoration"> // </span> Hacemos belleza
 	</h3>
 	
 	<!-- Wrapper de Contenido / Contenedor Layout -->

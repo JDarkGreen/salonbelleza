@@ -137,6 +137,8 @@ $options = get_option("theme_settings");
 
 	<?php wp_footer(); ?>
 
+	<script> var url = "<?= THEMEROOT ?>"; </script>
+
 	</div> <!-- /end sliderbar container -->
 
 </body>

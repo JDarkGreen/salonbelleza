@@ -27,7 +27,7 @@
 
 		<!-- Subtitulo -->
 		<h3 class="subtitleCommon__section"> 
-			<span class="decoration"></span>
+			<span class="decoration"> // </span>
 			<?= !empty($post->post_content) ? $post->post_content : 'He aquí algunos de nuestros mejores proyectos'; ?>
 		</h3> <!-- /. -->
 
