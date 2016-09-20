@@ -37,6 +37,8 @@
 	<![endif]-->
 
 	<!-- Favicon and Apple Icons -->
+	<link rel="shortcut icon" href="<?= IMAGES ?>/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="<?= IMAGES ?>/favicon.ico" type="image/x-icon" />
 
 	<?php wp_head(); ?>
 </head>
@@ -53,6 +55,16 @@
 ?>
 
 <body <?php body_class(); ?>>
+
+<?php 
+	//Llamar a funcion que despliega las redes sociales
+	display_social_links();
+?>
+
+<!-- Boton que llevará a la cima -->
+<div id="arrow-up-page" canvas="">
+	<i class="fa fa-chevron-up" aria-hidden="true"></i>
+</div>
 
 <!-- Contenedor canvas wrapper para slider mobile -->
 <div canvas="container">

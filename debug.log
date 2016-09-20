@@ -1,7 +1,0 @@
-[20-Sep-2016 19:32:42 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\salonbelleza\wp-content\themes\glam-customtheme\functions\custom-functions.php on line 22
-[20-Sep-2016 19:32:46 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\salonbelleza\wp-content\themes\glam-customtheme\functions\custom-functions.php on line 22
-[20-Sep-2016 19:33:25 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\salonbelleza\wp-content\themes\glam-customtheme\functions\custom-functions.php on line 22
-[20-Sep-2016 19:33:32 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\salonbelleza\wp-content\themes\glam-customtheme\functions\custom-functions.php on line 22
-[20-Sep-2016 19:33:42 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\salonbelleza\wp-content\themes\glam-customtheme\functions\custom-functions.php on line 22
-[20-Sep-2016 19:33:42 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\salonbelleza\wp-content\themes\glam-customtheme\functions\custom-functions.php on line 22
-[20-Sep-2016 20:49:40 UTC] PHP Notice:  Undefined variable: banner_object in C:\xampp\htdocs\salonbelleza\wp-content\themes\glam-customtheme\category.php on line 14

@@ -12,14 +12,25 @@ function getWidthBrowser()
 }
 
 
-
-
 (function($){
 /*|----------------------------------------------------------------------|*/
 
 	j(document).on('ready',function(){
 
-		
+		/*|-----------------------------------|*/
+		/*|-----  BOTON ARRIBA  -----|*/
+		/*|------------------------------------|*/
+
+		j('#arrow-up-page').on('click' , function(e){
+
+			e.preventDefault();
+
+			j('div[canvas=container]').animate( 
+			    {scrollTop: '0px' } , 700
+			);
+
+		});
+
 		/*|----------------------------------------------------------------------|*/
 		/*|-----  SLIDEBAR MENU NAVEGACION RESPONSIVE -----|*/
 		/*|----------------------------------------------------------------------|*/
@@ -281,15 +292,37 @@ function getWidthBrowser()
 
 		}
 
-
-
-
-
-
-
-
-
 	/*|- end of document -|*/
+	});
+
+
+	/**
+	* Eventos on Scroll no se pone a window o document
+	* ya que afecta la libreria slidebar js
+	**/
+
+	j('div[canvas=container]').on( 'scroll' , function(){
+
+		var wrapperContainer = 	j('div[canvas=container]');
+
+		/*|------------------------------------|*/
+		/*|----- BOTÓN ARRIBA -----|*/
+		/*|---------------------------------------------------|*/	
+		
+		//Si está el boton
+		if( j('#arrow-up-page').length )
+		{
+			if( wrapperContainer.scrollTop() >= 400 )
+			{
+				j('#arrow-up-page').fadeIn();
+			}else{
+				j('#arrow-up-page').fadeOut('fast');
+			}
+		}
+
+		/*---------------------------------------------------------*/
+		
+
 	});
 
 /*|----------------------------------------------------------------------|*/

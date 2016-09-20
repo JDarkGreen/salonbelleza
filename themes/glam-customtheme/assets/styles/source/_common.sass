@@ -134,20 +134,18 @@ img.aligncenter, img.alignright, img.alignleft
 		color     : rgb(196, 166, 72)
 
 
-
-
-
 //BOTÓN HACIA ARRIBA 
 #arrow-up-page
 	+transition( all 500ms ease )
-	background: rgba( 0,0,0, .5 )
+	background: #D0A63E
 	color     : white 
+	cursor    : pointer
 	display   : none 
 	font-size : 18px
-	padding   : 6px 13px
+	padding   : 8px 12px
 	position  : fixed
 	right     : 3%
-	top       : 86%
+	top       : 90%
 	z-index   : 999999
 
 /** [ BOTON COMÚN A SECCIONES ] **/
@@ -219,6 +217,39 @@ img.aligncenter, img.alignright, img.alignleft
 /***************************************************************************************/
 /**-- 1.6 REDES SOCIALES -------------------------------------------------------------**/
 /***************************************************************************************/
+
+//ID MENU DE REDES SOCIALES CON POSICIÓN FIJA
+#menu-social-links-fixed
+	list-style-type: none
+	margin         : 0
+	padding        : 0
+	position       : fixed
+	right          : 17px
+	top            : 25%
+	z-index        : 999
+	li 
+		a  
+			+transition( all 900ms ease-in-out )
+			align-items    : center
+			color          : white
+			display        : flex
+			height         : 35px 
+			justify-content: center
+			text-decoration: none 
+			width          : 35px
+			//:hover
+			&:hover 
+				+scale( 1.15 )
+
+			//variaciones 
+			&.fb 
+				background: #00388E
+			&.tw 
+				background: #00AEE0
+			&.yt 
+				background: #FF4F29
+
+
 //+Redes Sociales - ul
 .sectionSocialLinks
 	display        : inline-block
