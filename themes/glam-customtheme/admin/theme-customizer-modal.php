@@ -109,8 +109,8 @@ function custom_theme_options_page()
 	        <a href="#" data-display="optionsBusiness" data-animation="clip" data-animationspeed="500"> 
 	       	<?= __("Personalización Empresa ( Tel. , emails , etc )" , LANG ); ?> </a>   
 
-			<!-- portBox Handler -->
-	        <a href="#" data-display="optionsSocialLinks" data-animation="slide" data-animationspeed="500"> 
+			<!-- portBox Handler CONTACTO -->
+	        <a href="#" data-display="optionsContactoMapa" data-animation="blind" data-animationspeed="500"> 
 	       	<?= __("Personalización Contacto - Mapa" , LANG ); ?> </a>
 
 			<!-- portBox Handler -->
@@ -155,7 +155,17 @@ function custom_theme_options_page()
 			</button>
 		</div> <!---->
 
-    	<!-- portBox Content FOOTER -->
+    	<!-- portBox Content CONTACTO MAPA -->
+		<div id="optionsContactoMapa" class="portBox">
+			<?php
+				settings_fields( 'customThemePageContactoMapa' );
+				do_settings_sections( 'customThemePageContactoMapa' );
+			?>
+			<button class="js-update-ajax-options button button-primary" data-id="optionsContactoMapa"> Actualizar 
+			</button>
+		</div> <!---->    	
+
+		<!-- portBox Content FOOTER -->
 		<div id="optionsFooter" class="portBox">
 			<?php
 				settings_fields( 'customThemePageFooter' );

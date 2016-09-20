@@ -9,8 +9,9 @@ function load_admin_custom_enqueue() {
 	//upload media
 	wp_enqueue_media();
 
+
 	//JQUERY UI
-	wp_enqueue_script('wp-js-jqueryui', THEMEROOT . '/admin/assets/js/portbox/jquery-ui-1.10.3.custom.min.js', array('jquery' ), '1.10.3', true);
+	wp_enqueue_script('wp-js-jqueryui', 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js', array('jquery' ), '1.10.3', true );
 
 	/**
 	* ESTILOS MODAL - portBox

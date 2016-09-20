@@ -12,6 +12,11 @@ include('template-fields/social-fields.php');
 include('template-fields/empresa-fields.php');
 
 /*------------------------------*
+* SECCION CONTACTO
+*------------------------------*/
+include('template-fields/contacto-fields.php');
+
+/*------------------------------*
 * SECCION FOOTER
 *------------------------------*/
 include('template-fields/footer-fields.php');
@@ -410,137 +415,6 @@ function custom_theme_organizational_structure_render()
 	<?php
 }
 
-/*--------------------------------------------------------------------------------*/
-
-
-/**
-<?php add_settings_section( $id, $title, $callback, $page ); ?>
-* PERSONALIZAR CONTACTO MAPA
-
-//Inputs
-add_settings_field( $id, $title, $callback, $page, $section, $args );
-**/
-add_settings_section( PREFIX."_themePage_contacto" , __( 'Personalizar Contacto Mapa:' , 'LANG' ), 'custom_settings_contacto_callback', 'customThemePageContactoMapa' );
-
-function custom_settings_contacto_callback()
-{ 
-	echo __( 'Personaliza los campos correspondientes:', 'LANG' );
-}
-
-//LATITUD COORDENADA MAPA
-add_settings_field( 'theme_lat_coord', __( 'Latitud:', 'LANG' ), 'custom_latitud_render', 'customThemePageContactoMapa', PREFIX."_themePage_contacto" );
-//Renderizado 
-function custom_latitud_render() 
-{ 
-	$options = get_option( 'theme_settings' ); ?>
-
-	<p class="description"><?= __( "Digita Coordenada : Latitud" , "LANG" ); ?></p>
-	<input type='text' name='theme_settings[theme_lat_coord]' value='<?= !empty($options['theme_lat_coord']) ? $options['theme_lat_coord'] : "" ; ?>' />
-	<?php
-}
-
-
-//LONGITUD COORDENADA MAPA
-add_settings_field( 'theme_long_coord', __( 'Longitud:', 'LANG' ), 'custom_longitud_render', 'customThemePageContactoMapa', PREFIX."_themePage_contacto" );
-//Renderizado 
-function custom_longitud_render() 
-{ 
-	$options = get_option( 'theme_settings' ); ?>
-	<p class="description"><?= __( "Digita Coordenada : Longitud" , "LANG" ); ?></p>
-	<input type='text' name='theme_settings[theme_long_coord]' value='<?= !empty($options['theme_long_coord']) ? $options['theme_long_coord'] : "" ; ?>' />
-	<?php
-}
-
-
-//LONGITUD COORDENADA MAPA
-add_settings_field( 'theme_zoom_mapa', __( 'Zoom Mapa:', 'LANG' ), 'custom_zoom_map_render', 'customThemePageContactoMapa', PREFIX."_themePage_contacto" );
-//Renderizado 
-function custom_zoom_map_render() 
-{ 
-	$options = get_option( 'theme_settings' ); ?>
-	<p class="description"><?= __( "Zoom Mapa defecto 16" , "LANG" ); ?></p>
-	<input type='text' name='theme_settings[theme_zoom_mapa]' value='<?= !empty($options['theme_zoom_mapa']) ? $options['theme_zoom_mapa'] : 16 ; ?>' />
-	<?php
-}
-
-//Texto Marcador Mapa
-add_settings_field( 'theme_text_markup_map', __( 'Texto del Marcador:', 'LANG' ), 'custom_text_markup_map_render', 'customThemePageContactoMapa', PREFIX."_themePage_contacto" );
-//Renderizado 
-function custom_text_markup_map_render() 
-{ 
-	$options = get_option( 'theme_settings' ); ?>
-	<p class="description"><?= __( "Texto del Marcador de Mapa" , "LANG" ); ?></p>
-
-	<textarea name="theme_settings[theme_text_markup_map]" id="" style="width:400px;height:200px;max-height:200px;"><?= !empty($options['theme_text_markup_map']) ? $options['theme_text_markup_map'] : "" ; ?> </textarea>
-	<?php
-}
-
-
-//IMAGEN CONTACTO SECCION
-add_settings_section( PREFIX."_themePage_contacto_image" , __( 'Personalizar Contacto Imágen:' , 'LANG' ), 'custom_settings_contacto_image_callback', 'customThemePageContactoMapa' );
-
-function custom_settings_contacto_image_callback()
-{ 
-	echo __( 'Personaliza imágen contacto:', 'LANG' );
-}
-
-//AGREGAR CAMPO DE IMAGEN
-add_settings_field( 'theme_img_contact', __( 'Imágen Contacto:', 'LANG' ), 'custom_image_contact_render', 'customThemePageContactoMapa', PREFIX."_themePage_contacto_image" );
-//Renderizado 
-function custom_image_contact_render() 
-{ 
-	$options = get_option( 'theme_settings' ); ?>
-	
-    <!-- Contenedor de Imagen -->
-    <section class="customize-img-container">
-
-        <!-- Input oculto guarda imagen -->
-        <input type="hidden" id="theme_img_contact" class="" name="theme_settings[theme_img_contact]" size="25" value="<?= !empty($options['theme_img_contact']) ? $options['theme_img_contact'] : "" ; ?>" />
-
-        <!-- Contenedor Agregar Imagen Previa -->
-        <div class="container-preview">
-            <?php if( !empty($options['theme_img_contact']) && !is_null($options['theme_img_contact']) ) : ?>
-            <img src="<?= $options['theme_img_contact']; ?>" style="width:100px; height:100px;" />
-            <?php endif ?>
-        </div> 
-        
-        <!-- Botón agregar imágen --> 
-        <br/><button class="js-add-custom-img button button-primary" data-input="theme_img_contact" >
-            <?php empty($options['theme_img_contact']) || is_null($options['theme_img_contact']) ? _e( 'Agregar Imagen' , LANG ) : _e( 'Cambiar Imagen' , LANG ) ; ?>
-        </button> 
-
-        <!-- Botón remover Imagen Oculto -->
-        <button class="js-remove-custom-img button button-primary" data-input="theme_img_contact">
-            <?php _e( 'Remover Imagen' , LANG ); ?>
-        </button>
-
-        <!-- Descripcion -->
-        <br/><p class="description"><?php _e('Subir una imagen para este campo'); ?></p>
-
-    </section> <!-- /.customize-img-container -->
-		
-	<?php
-}
-
-//MAS INFORMACION CONTACTO
-/*add_settings_field( 'theme_contact_more_info', __( 'Información Contacto:', 'LANG' ), 'custom_contact_more_render', 'customThemePageContactoMapa', PREFIX."_themePage_contacto" );
-//Renderizado 
-function custom_contact_more_render() 
-{ 
-	$options = get_option( 'theme_settings' ); 
-
-	$option_content = array( 
-		'dfw'          => true, 
-		'editor_height'=> '200' ,
-		'textarea_name'=> "theme_settings[theme_contact_more_info]",
-	);	
-?>
-	<p class="description"><?= __( "Información Contacto: " , "LANG" ); ?></p>
-<?php
-	$text_contact = isset($options['theme_contact_more_info']) ? $options['theme_contact_more_info'] : "";
-
-	wp_editor( htmlspecialchars_decode( $text_contact ), 'theme_contact_more_info' , $option_content );
-}*/
 
 
 

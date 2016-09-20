@@ -22,6 +22,13 @@
  */
 
 /**
+ * Opciones del tema
+*/
+
+$options = get_option("theme_settings");
+
+
+/**
  * Definiendo Constantes
 */
 include('functions/constants.php');
@@ -88,4 +95,10 @@ require('functions/support-formats.php');
 *------------------*/
 
 require_once('functions/scripts-js.php');
+
+/*-----------------
+/* FUNCIONES PERSONALIZADAS
+*------------------*/
+
+include('functions/custom-functions.php');
 
