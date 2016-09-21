@@ -51,21 +51,73 @@
 
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs" role="tablist">
+
 						<li class="nav-item">
 					    	<a class="nav-link active" data-toggle="tab" href="#service-cortes" role="tab"> Corte y Peinados </a>
 					  	</li>
+
+						<?php  
+							/*
+							 * Comprobar si metabox de color esta seteado
+							 */
+							$mb_color = get_post_meta( $post->ID , 'mbservicecolor', true);
+							
+							$mb_color = preg_replace('/\s+/', '', $mb_color);
+
+							if( !empty($mb_color) ) :
+						?>
 					  	<li class="nav-item">
 					    	<a class="nav-link" data-toggle="tab" href="#service-color" role="tab"> Color </a>
 					  	</li>
+					  	<?php endif; ?>
+
+
+						<?php  
+							/*
+							 * Comprobar si metabox de cuidados esta seteado
+							 */
+							$mb_care = get_post_meta( $post->ID , 'mbservicecare', true);
+							
+							$mb_care = preg_replace('/\s+/', '', $mb_care);
+
+							if( !empty($mb_care) ) :
+						?>
 					  	<li class="nav-item">
 					    	<a class="nav-link" data-toggle="tab" href="#service-care" role="tab"> Cuidados </a>
 					  	</li>
+					  	<?php endif; ?>
+					  	
+						<?php  
+							/*
+							 * Comprobar si metabox de lisos esta seteado
+							 */
+							$mb_lisos = get_post_meta( $post->ID , 'mbservicelisos', true);
+							
+							$mb_lisos = preg_replace('/\s+/', '', $mb_lisos);
+
+							if( !empty($mb_lisos) ) :
+						?>
 					  	<li class="nav-item">
 					    	<a class="nav-link" data-toggle="tab" href="#service-lisos" role="tab"> Lisos </a>
 					  	</li>
+					  	<?php endif; ?>
+
+
+						<?php  
+							/*
+							 * Comprobar si metabox de maquillaje esta seteado
+							 */
+							$mb_makeup = get_post_meta( $post->ID , 'mbservicemakeup', true);
+							
+							$mb_makeup = preg_replace('/\s+/', '', $mb_makeup);
+
+							if( !empty($mb_makeup) ) :
+						?>
 					  	<li class="nav-item">
 					    	<a class="nav-link" data-toggle="tab" href="#service-makeup" role="tab"> Maquillaje </a>
 					  	</li>
+					  	<?php endif; ?>
+					
 					</ul> <!-- /.nav nav-tabs -->
 
 					<!-- Tab panes -->
