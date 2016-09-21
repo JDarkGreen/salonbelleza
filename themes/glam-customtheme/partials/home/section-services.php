@@ -27,6 +27,8 @@
 					'post_status'    => 'publish',
 					'post_type'      => 'theme-services',
 					'posts_per_page' => -1,
+					'order'          => 'ASC',
+					'orderby'        => 'menu_order',
 				);
 
 				$services = get_posts( $args );

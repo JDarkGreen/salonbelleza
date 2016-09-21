@@ -53,7 +53,7 @@
 					<?= apply_filters( 'the_content' , $page_conocenos->post_content ); ?>
 					
 					<!-- Botón ver más -->
-					<a href="#" class="btn-show-more">Más Info</a>
+					<a href="<?= get_permalink( $page_conocenos->ID ); ?>" class="btn-show-more">Más Info</a>
 
 				</div> <!-- /.content-text -->
 				

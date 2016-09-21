@@ -46,6 +46,10 @@
 						<?= apply_filters( 'the_content' , $post->post_content ); ?>
 					</div> <!-- /.text-content -->
 
+					<!-- Compartir -->
+					<h5 class="text-uppercase"> <b> Compartir: </b> </h5>
+					<!-- Facebook -->
+					<a href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=<?= get_permalink($post->ID) ?>' , '_blank' , 'width=400 , height=500' ); void(0);"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 					
 				</article> <!-- /.itemSingleBlog -->
 
@@ -66,6 +70,9 @@
 	</div> <!-- /.pageContentLayout -->
 
 </div> <!-- /.pageWrapperLayout -->
+
+<!-- Incluir banner contacto -->
+<?php include( locate_template('partials/section-contact-banner.php') ); ?>
 
 <!-- Footer -->
 <?php get_footer(); ?>

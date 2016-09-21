@@ -59,9 +59,14 @@
 								echo $subtitle = wp_strip_all_tags( get_the_content() );
 							?>
 						</h3> <!-- /.pageInicio__slider__subtitle -->
+
+						<?php  
+							//Página contacto
+							$page_contact = get_page_by_title('contactenos');
+						?>
 						
 						<!-- Botón de Reserva -->
-						<a href="#" class="button_reserved">
+						<a href="<?= get_permalink($page_contact->ID); ?>" class="button_reserved">
 							<?php _e( 'Reservar ahora' , LANG ); ?>
 						</a>
 
